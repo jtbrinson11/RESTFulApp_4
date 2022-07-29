@@ -13,6 +13,6 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="connection.pool_size">3</property>
-        <mapping resource="computer.hbm.xml"/>
+        <mapping class="org.GenSpark.Entity.Computer"/>
     </session-factory>
 </hibernate-configuration>

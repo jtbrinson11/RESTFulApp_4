@@ -2,12 +2,13 @@ package org.GenSpark.Entity;
 
 import javax.persistence.*;
 
-//@Entity
-//@Table(name = "tbl_computer")
+@Entity
+@Table(name = "tbl_computer")
 public class Computer {
 
-    //@Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "compID")
+    @SequenceGenerator(name = "compID", initialValue = 1, allocationSize = 1)
     private int computerID;
     private String motherBoard;
     private String OS;
@@ -99,6 +100,7 @@ public class Computer {
     }
 
     public Computer(int computerID, String motherBoard, String OS, String CPU, String GPU, String RAM, String HDD, String OD) {
+        super();
         this.computerID = computerID;
         this.motherBoard = motherBoard;
         this.OS = OS;
